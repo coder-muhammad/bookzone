@@ -45,7 +45,7 @@ async function loadFeaturedBook() {
       featuredImg.src = book.coverUrl;
       featuredImg.onerror = () => {
         featuredImg.onerror = null;
-        featuredImg.src = "./../assets/images/img.jpg";
+        featuredImg.src = "../assets/images/img.jpg";
       };
 
       document.getElementById("featuredTitle").textContent = book.title;
@@ -58,7 +58,7 @@ async function loadFeaturedBook() {
         detailLink.addEventListener("click", (e) => {
           e.preventDefault();
           localStorage.setItem("selectedBook", JSON.stringify(book));
-          window.location.href = "./../pages/bookDetail.html";
+          window.location.href = "../pages/bookDetail.html";
         });
       }
     }

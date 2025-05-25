@@ -23,7 +23,7 @@
     div.className = "col-md-3";
 
     // Fallback local image path (use relative path for web deployment)
-    const fallbackImage = "./../assets/images/img.jpg";
+    const fallbackImage = "../assets/images/img.jpg";
 
     // Use book.coverUrl if valid, else fallback image
     const coverImage = book.coverUrl ? book.coverUrl : fallbackImage;

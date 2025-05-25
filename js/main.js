@@ -1,7 +1,7 @@
 // main.js
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    window.location.href = "./pages/home.html";
+    window.location.href = "pages/home.html";
   }, 1500); // You can increase or decrease the delay time
 });
 

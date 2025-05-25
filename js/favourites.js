@@ -1,5 +1,5 @@
 const favouritesContainer = document.getElementById('favouritesContainer');
-const favMessage = document.getElementById('favMessage');
+const favMessage = document.getElementById('favouritesMessage');
 
 function createBookCard(book) {
   const description = book.description || 'No description available';

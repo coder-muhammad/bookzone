@@ -35,7 +35,7 @@ function createBookCard(book) {
   const detailBtn = div.querySelector('.view-details-btn');
   detailBtn.addEventListener('click', () => {
     localStorage.setItem('selectedBook', JSON.stringify(book));
-    window.location.href = './bookDetail.html';
+    window.location.href = '../pages/bookDetail.html';
   });
 
   return div;
