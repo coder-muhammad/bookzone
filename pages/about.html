@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookZone - About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./../css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-3">
+    <a class="navbar-brand fw-bold" href="./home.html">BookZone</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./search.html">Search</a></li>
+        <li class="nav-item"><a class="nav-link" href="./allBooks.html">All Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="./favourites.html">Favourites</a></li>
+        <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="./about.html">About</a></li>
+      </ul>
+      <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm">Dark Mode</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h2 class="card-title mb-3">About BookZone</h2>
+            <p class="lead">
+              <strong>BookZone</strong> is your unified book discovery platform. It brings together books from:
+            </p>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="list-group-item"><strong>Open Library</strong> – A vast digital library with millions of books.</li>
+              <li class="list-group-item"><strong>Google Books</strong> – Popular books across genres with previews.</li>
+              <li class="list-group-item"><strong>Project Gutenberg</strong> – Free public domain classics.</li>
+            </ul>
+            <p>
+              BookZone allows users to:
+            </p>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="list-group-item">Search for books using keywords</li>
+              <li class="list-group-item">Browse all books with sorting and pagination</li>
+              <li class="list-group-item">Save your favourite books</li>
+              <li class="list-group-item">Toggle between Light/Dark themes</li>
+            </ul>
+            <p>
+              This project is built using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>Bootstrap 5</strong>, and <strong>vanilla JavaScript</strong>.
+              APIs are integrated using Fetch, and data is managed locally via <code>localStorage</code>.
+            </p>
+            <p class="mb-0">
+              Whether you're a casual reader or a passionate bibliophile, BookZone is designed to be your companion for discovering great reads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-light border-top">
+    &copy; 2025 <strong>BookZone</strong>. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./../js/ui.js"></script>
+  <script src="./../js/theme.js"></script>
+  <script src="./../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
