@@ -41,7 +41,6 @@ function createBookCard(book) {
   return div;
 }
 
-
 function addToFavourites(book) {
   let favs = JSON.parse(localStorage.getItem('favourites')) || [];
   if (favs.find((b) => b.id === book.id && b.source === book.source)) {
@@ -69,7 +68,6 @@ async function performSearch(query) {
   const timeout = setTimeout(() => abortController.abort(), 10000); // 10 seconds
 
   showLoader();
-  // searchMessage.textContent = 'Searching...';
   searchResults.innerHTML = '';
 
   try {
@@ -106,6 +104,7 @@ searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const query = searchInput.value.trim();
   if (query) {
+    saveSearchQuery(query); // Save the search term to localStorage
     performSearch(query);
   }
 });
@@ -117,3 +116,20 @@ cancelSearchBtn.addEventListener('click', () => {
     searchMessage.textContent = 'Search cancelled.';
   }
 });
+
+function saveSearchQuery(query) {
+  let searches = JSON.parse(localStorage.getItem('recentSearches')) || [];
+
+  // Remove duplicates (case-insensitive)
+  searches = searches.filter((term) => term.toLowerCase() !== query.toLowerCase());
+
+  // Add latest query to the end
+  searches.push(query);
+
+  // Keep only the last 10 searches
+  if (searches.length > 10) {
+    searches = searches.slice(-10);
+  }
+
+  localStorage.setItem('recentSearches', JSON.stringify(searches));
+}
