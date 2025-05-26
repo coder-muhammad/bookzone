@@ -69,7 +69,7 @@ async function performSearch(query) {
   const timeout = setTimeout(() => abortController.abort(), 10000); // 10 seconds
 
   showLoader();
-  searchMessage.textContent = 'Searching...';
+  // searchMessage.textContent = 'Searching...';
   searchResults.innerHTML = '';
 
   try {
