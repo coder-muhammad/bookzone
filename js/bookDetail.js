@@ -33,6 +33,9 @@ function displayBookDetail(book) {
 
 
 function setupAddToFavourites(book) {
+  const modalMessage = document.getElementById("favouriteModalMessage");
+  const favouriteModal = new bootstrap.Modal(document.getElementById("favouriteModal"));
+
   document.getElementById("addToFavourites").addEventListener("click", () => {
     const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
     const exists = favourites.some((b) => b.id === book.id);
@@ -40,9 +43,12 @@ function setupAddToFavourites(book) {
     if (!exists) {
       favourites.push(book);
       localStorage.setItem("favourites", JSON.stringify(favourites));
-      alert("Book added to favourites!");
+      modalMessage.textContent = "Book added to favourites!";
     } else {
-      alert("This book is already in your favourites.");
+      modalMessage.textContent = "This book is already in your favourites.";
     }
+
+    favouriteModal.show();
   });
 }
+
